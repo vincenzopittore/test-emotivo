@@ -1,42 +1,41 @@
-Python 3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
->>> import streamlit as st
-... 
-... st.title("Test di Intelligenza Emotiva")
-... 
-... st.write("Rispondi alle seguenti domande da 1 (pochissimo) a 5 (molto).")
-... 
-... def sezione(titolo, domande):
-...     st.header(titolo)
-...     punteggi = []
-...     for d in domande:
-...         val = st.slider(d, 1, 5, 3)
-...         punteggi.append(val)
-...     return sum(punteggi)
-... 
-... # SEZIONI
-... 
-... auto = sezione("Autoconsapevolezza", [
-... "Ami scherzare e ridere di te stesso",
-... "Conosci i tuoi limiti e i tuoi punti di forza",
-... "Sai quali sono i tuoi difetti e i tuoi pregi",
-... "Riesci a parlare delle tue emozioni",
-... "Hai una visione chiara di ciò che sai fare bene",
-... "Sai cosa ti soddisfa",
-... "Ti ritieni in grado di raggiungere i tuoi obiettivi",
-... "Usi bene le tue energie",
-... "Affronti situazioni difficili",
-... "Sei consapevole dei tuoi valori"
-... ])
-... 
-... controllo = sezione("Controllo delle emozioni", [
-... "Sai quali emozioni ti condizionano",
-... "Gestisci le emozioni negative",
-... "Sei coerente con i tuoi valori",
-... "Sei ottimista",
-... "Mantieni la calma nei cambiamenti",
-... "Rifletti prima di agire",
-... "Valuti prima di dare colpe",
+
+import streamlit as st
+
+st.title("Test di Intelligenza Emotiva")
+ 
+st.write("Rispondi alle seguenti domande da 1 (pochissimo) a 5 (molto).")
+
+def sezione(titolo, domande):
+     st.header(titolo)
+     punteggi = []
+     for d in domande:
+         val = st.slider(d, 1, 5, 3)
+         punteggi.append(val)
+     return sum(punteggi)
+ 
+ # SEZIONI
+ 
+ auto = sezione("Autoconsapevolezza", [
+ "Ami scherzare e ridere di te stesso",
+ "Conosci i tuoi limiti e i tuoi punti di forza",
+ "Sai quali sono i tuoi difetti e i tuoi pregi",
+ "Riesci a parlare delle tue emozioni",
+ "Hai una visione chiara di ciò che sai fare bene",
+ "Sai cosa ti soddisfa",
+ "Ti ritieni in grado di raggiungere i tuoi obiettivi",
+ "Usi bene le tue energie",
+ "Affronti situazioni difficili",
+ "Sei consapevole dei tuoi valori"
+ ])
+ 
+ controllo = sezione("Controllo delle emozioni", [
+ "Sai quali emozioni ti condizionano",
+ "Gestisci le emozioni negative",
+ "Sei coerente con i tuoi valori",
+ "Sei ottimista",
+ "Mantieni la calma nei cambiamenti",
+ "Rifletti prima di agire",
+ "Valuti prima di dare colpe",
 "Ami sorridere",
 "Non ti senti vittima",
 "Impari dagli errori"
